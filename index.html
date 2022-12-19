@@ -25,6 +25,13 @@
         <input type="text" data-d1="d1" placeholder="---district---">
         <input type="button" onclick="click3()" value="submit">
 
+        <label for="gender"></label>
+        <select name="gender" id="gender" placeholder="jhdsja">
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="other">other</option>
+        </select>
+        <input type="button" value="submit" onclick="data()">
 
     </form>
 
@@ -60,6 +67,14 @@
         //1. Function defination
         function click3(){
             $district.value = "Neemuch"
+        }
+    </script>
+    <script>
+        
+        let r1 = document.getElementById("gender")
+
+        function data(){
+            console.log(r1.value)
         }
     </script>
 </body>
