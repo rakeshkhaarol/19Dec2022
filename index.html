@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML and input</title>
+</head>
+<body>
+    <div data-r="r"></div>
+
+    <form >
+
+        <label for="contryname">my contryname</label>
+        <input type="text" id="new" placeholder="---yourcontryname---">
+        <input type="button" onclick="click1() "value='submit'>
+
+
+        <label for="state" >state</label>
+        <input type="text" class="new1" placeholder="---yourstate---">
+        <input type="button" onclick="click2()" value ='submit'>
+
+
+        <label for="district">district</label>
+        <input type="text" data-d1="d1" placeholder="---district---">
+        <input type="button" onclick="click3()" value="submit">
+
+
+    </form>
+
+
+    <script>
+        //i can write js code clogging the body teg
+
+        //GLobal Variable
+        let element = document.querySelector('[data-r="r"]');
+        element.innerHTML = 'hello everyone';
+
+
+        //GLobal Variable
+        let $contryname = document.getElementById("new")
+
+        //1. Function defination
+        function click1() {
+            $contryname.value = 'India'
+        }
+    </script>
+    <script>
+        //GLobal Variable
+        var _state = document.querySelector(".new1")
+
+        //1. Function defination
+        function click2(){
+            _state.value = `madhya pradesh`
+        }
+    </script>
+    <script>
+        const $district = document.querySelector('[data-d1=\'d1\']')
+
+        //1. Function defination
+        function click3(){
+            $district.value = "Neemuch"
+        }
+    </script>
+</body>
+</html>
